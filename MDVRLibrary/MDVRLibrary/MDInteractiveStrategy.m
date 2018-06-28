@@ -130,6 +130,8 @@
 @implementation MDInteractiveStrategyManager
 
 - (void) switchMode:(int)mode{
+    [super switchMode:mode];
+    /*
     int prev = self.mMode;
     [super switchMode:mode];
     if (prev != mode) {
@@ -140,6 +142,7 @@
             }
         }
     }
+    */
 }
 
 -(void) handleDragDistX:(float)distX distY:(float)distY{

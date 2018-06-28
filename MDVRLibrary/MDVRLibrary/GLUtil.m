@@ -332,9 +332,11 @@ typedef struct
         case UIDeviceOrientationLandscapeLeft:
             sensor = [GLUtil remapCoordinateSystem:sensor.m X:AXIS_Y Y:AXIS_MINUS_X];
             break;
+        case UIDeviceOrientationPortraitUpsideDown:
+            sensor = [GLUtil remapCoordinateSystem:sensor.m X:-AXIS_X Y:-AXIS_Y];
+            break;
         case UIDeviceOrientationUnknown:
         case UIDeviceOrientationPortrait:
-        case UIDeviceOrientationPortraitUpsideDown://not support now
         default:
             break;
     }
